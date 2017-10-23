@@ -1,12 +1,6 @@
 # Translations for Akeeba Software
 
-Master repository of language files for all Akeeba Software
-
-## WORK IN PROGRESS - DO NOT USE YET
-
-> **WARNING! WORK IN PROGRESS!
->
-> The URLs on this page are not yet ready for the public. Things are still in flux and may break. Please wait for our announcement before trying to contribute to these translations. Thank you!
+Master repository of language files for all Akeeba software
 
 ## What is this?
 
