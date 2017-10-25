@@ -52,3 +52,6 @@ fabric.properties
 
 # All JSON exports for Weblate
 weblate_*.json
+
+# The release directory where we keep the packages built
+release
