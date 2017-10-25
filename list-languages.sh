@@ -17,7 +17,7 @@ usage () {
 	exit 255
 }
 
-if [ $# -lt 2 ]
+if [ $# -lt 1 ]
 then
 	usage
 
