@@ -9,14 +9,24 @@
         [LANGNAME]
     </td>
     <td>
-        <a href="[WEBLATEURL]/engage/[WEBLATEPROJECT]/[LANGCODE]/?utm_source=widget">
-            <img src="[WEBLATEURL]/widgets/[WEBLATEPROJECT]/[LANGCODE]/svg-badge.svg" alt="Translation status" />
+        <a href="[WEBLATEURL]/languages/[LANGCODE]/[WEBLATEPROJECT]/?utm_source=cdn">
+            <div class="progress">
+                <div class="progress-bar progress-bar-[BS_PROGRESSBAR_TYPE]" role="progressbar" aria-valuenow="[PERCENT]" aria-valuemin="0" aria-valuemax="100" style="width: [PERCENT]%;">
+                    [PERCENT]%
+                </div>
+            </div>
         </a>
     </td>
     <td>
         <a class="btn btn-link" href="[PACKAGEURL]">
             <span class="glyphicon glyphicon-download-alt"></span>
             Download
+        </a>
+
+        <a class="btn btn-link btn-sm hidden-xs"
+                href="[WEBLATEURL]/engage/[WEBLATEPROJECT]/[LANGCODE]/?utm_source=cdn">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Contribute
         </a>
     </td>
 </tr>
