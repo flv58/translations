@@ -27,5 +27,5 @@ do
     mkdir -p `pwd`/release/$d
 
     # Call the buildfiles script from the relevant repository
-    php ../buildfiles/tools/build-language-options.php -t `pwd`/$d -o `pwd`/release/$d -d $@
+    php ../buildfiles/tools/build-language.php -t `pwd`/$d -o `pwd`/release/$d -d $@
 done;
