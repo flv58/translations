@@ -50,9 +50,12 @@
 	</p>
 
 	<div class="alert alert-warning">
-		<p>
+		<h4>
 			<span class="glyphicon glyphicon-warning-sign"></span>
-			These files are meant to be installed in Akeeba Backup or Akeeba Solo before you take a backup.
+			These files only contain the translations, not the [SOFTWARETYPE] itself.
+		</h4>
+		<p>
+			Please download the [SOFTWARETYPE] for free <a href="[PACKAGENAMEURL]">from its download page</a>. Extract both the [SOFTWARE] and its languages' ZIP files in the same directory of your server before using [SOFTWARE].
 		</p>
 	</div>
 
@@ -61,57 +64,28 @@
 			<span class="glyphicon glyphicon-time"></span>
 			Updated on [DATE] GMT.
 		</p>
+		<p>
+			To ensure a good experience for our users, only languages translated to <strong>at least 50%</strong> are
+			distributed. Help us get your language on this list <a href="">by becoming a volunteer translator</a>!
+		</p>
 	</div>
 
 	<table width="100%" class="table table-striped">
 		<thead>
 		<tr>
-			<th>Language Pack</th>
+			<th width="30"></th>
+			<th width="100" class="hidden-xs">Code</th>
+			<th>Language</th>
+			<th class="hidden-xs">Status</th>
 			<th width="10%"></th>
 		</tr>
 		</thead>
 		<tbody>
-		[LANGTABLE]
+[LANGTABLE]
 		</tbody>
 	</table>
 
-	<div id="how-to-install">
-		<h3>Installation instructions</h3>
-
-		<h4>Akeeba Backup for Joomla!</h4>
-		<ol>
-			<li>Download the ‘Base language files and ANGIE for Joomla!’ package. It's a JPA file.</li>
-			<li>Upload this file to your site's <code>administrator/components/com_akeeba/Master/Installers</code> directory.</li>
-			<li>Take a new backup. The language files are included automatically inside the newly taken backup.</li>
-		</ol>
-
-		<h4>Akeeba Backup for WordPress</h4>
-		<ol>
-			<li>Download the ‘Base language files and ANGIE for Joomla!’ and the ‘ANGIE for WordPress’ packages. They are JPA files.</li>
-			<li>Upload these files to your site's <code>wp-content/plugins/akeebabackupwp/app/Solo/assets/installers</code> directory. Please note that the folder name may be different that <code>akeebabackupwp</code> on some sites, especially if you had first installed a version of our software released before 2017 on that site.</li>
-			<li>Take a new backup. The language files are included automatically inside the newly taken backup.</li>
-		</ol>
-
-		<h4>Akeeba Solo</h4>
-		<ol>
-			<li>Download the ‘Base language files and ANGIE for Joomla!’ and any number (or all) of the other packages, depending on what kind of sites you are backing up. The packages you are downloading are JPA files.</li>
-			<li>Upload these files to your Akeeba Solo's <code>Solo/assets/installers</code> directory.</li>
-			<li>Take a new backup. The language files are included automatically inside the newly taken backup.</li>
-		</ol>
-
-		<h4>Applying the languages on existing backups</h4>
-		<p>
-			All the options above work on new backups. If you have a backup you want to restore and need to use the language files for languages other than English (testing the translations or catering for a client of yours who does not speak English) you'll have to follow the instructions below every time you are restoring a backup.
-		</p>
-		<ol>
-			<li>Download the ‘Base language files and ANGIE for Joomla!’. It's a JPA file.</li>
-			<li>If you are restoring a site that's not based on Joomla! also download the relevant language package, e.g. ANGIE for WordPress if you are restoring a WordPress site.</li>
-			<li>Upload these files along with your backup archive and Kickstrart to the target site.</li>
-			<li>Run Kickstart. Select the <code>language-angie.jpa</code> file. After the file is extracted <em>do NOT</em> click on Run the Installer.</li>
-			<li>(optional). For non-Joomla! site backups repeat the previous step, choosing the other <code>language-<em>something</em>.jpa</code> file.</li>
-			<li>Run Kickstart once more, this time selecting your site's backup archive. Proceed with the restoration normally, i.e. click on the Run the Installer button. ANGIE should appear translated to your language, as long as the language order is correctly set up in your browser and a translation exists at an acceptable level in one of your selected languages.</li>
-		</ol>
-	</div>
+	<hr/>
 
 	<div id="how-to-file-corrections">
 		<h4>Have you found a translation issue?</h4>
