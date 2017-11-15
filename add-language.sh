@@ -26,14 +26,6 @@ fi
 
 EXISTING_FOLDERS=`find $1 -type d -name "$2"`
 EXISTING_FOLDERS_ARRAY=( $EXISTING_FOLDERS )
-NUM_EXISTING_FOLDERS=${#EXISTING_FOLDERS_ARRAY[@]}
-
-if [[ $NUM_EXISTING_FOLDERS -gt 0 ]]
-then
-    echo "Language $2 already exists in project $1"
-
-    exit 254
-fi
 
 echo "Adding language $2 to project $1"
 EN_FOLDERS=`find $1 -type d -name "en-GB"`
@@ -42,13 +34,21 @@ for ORIG in $EN_FOLDERS
 do
     BASEFOLDER=`dirname $ORIG`
     NEWFOLDER=$BASEFOLDER/$2
-    mkdir $NEWFOLDER
-    cp $ORIG/*.ini $NEWFOLDER
 
-    for d in $NEWFOLDER/*.ini
+    if [ ! -d "$NEWFOLDER" ]
+    then
+        mkdir $NEWFOLDER
+    fi
+
+    # Create empty files for what is missing
+    for d in $ORIG/*.ini
     do
-        NEWFILE=`echo $d | sed -e 's/en-GB\./'$2'./'`
-        rm $d
-        touch $NEWFILE;
+        basename=`basename $d`
+        NEWFILE=$NEWFOLDER/`echo $basename | sed -e 's/en-GB\./'$2'./'`
+
+        if [ ! -f "$NEWFILE" ]
+        then
+            touch $NEWFILE
+        fi
     done
 done
