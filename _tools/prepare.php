@@ -10,7 +10,6 @@ function convert_translations($translationRoot, $sourceRoot)
 			mkdir($translationRoot, 0755, true);
 		}
 
-		// TODO Process language files
 		$di = new DirectoryIterator($sourceRoot);
 
 		foreach ($di as $file)
