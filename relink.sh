@@ -15,7 +15,7 @@ do
         TARGET_FILE=$TARGET_REPO/administrator/language/el-GR/`basename $f`
         [[ -L $TARGET_FILE ]] && rm $TARGET_FILE
         [[ -f $TARGET_FILE ]] && rm $TARGET_FILE
-        ln -s $f $TARGET_FILE
+        cp $f $TARGET_FILE
     done
 
     FRONTEND_FILES=`find $d/component/frontend $d/modules/site -type f -name "el-GR.*.ini" 2>/dev/null`
@@ -25,6 +25,6 @@ do
         TARGET_FILE=$TARGET_REPO/language/el-GR/`basename $f`
         [[ -L $TARGET_FILE ]] && rm $TARGET_FILE
         [[ -f $TARGET_FILE ]] && rm $TARGET_FILE
-        ln -s $f $TARGET_FILE
+        cp $f $TARGET_FILE
     done
 done
